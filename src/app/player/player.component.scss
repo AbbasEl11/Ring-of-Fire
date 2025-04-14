@@ -1,0 +1,27 @@
+.player{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgb(50, 50, 50,0.8);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    >span{
+        font-size: 32px;
+        margin-right: 60px;
+    }
+
+    >img{
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 100%;
+        align-self: flex-end;
+        justify-content: flex-end;
+        display: flex;
+    }
+}
+
+        .player-active {
+            background-color: #ffb300 !important;
+        }
