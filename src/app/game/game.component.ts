@@ -7,6 +7,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { GameInfoComponent } from '../game-info/game-info.component';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { inject } from '@angular/core';
+
 
 @Component({
   selector: 'app-game',
@@ -19,14 +22,18 @@ export class GameComponent {
   pickCardAnimation = false;
   currentCard: string = "";
   game!: Game;
+  private firestore: Firestore;
 
-
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) { 
+      this.firestore = inject(Firestore);
+  }
 
   ngOnInit(): void {
-    this.game = new Game();
-    console.log(this.game);
-    
+  this.newGame();
+  let itemsCollection = collection(this.firestore, 'items');
+  collectionData(itemsCollection).subscribe((game) => {
+    console.log('Game Update', game);
+    });
   }
 
   takeCard() {
