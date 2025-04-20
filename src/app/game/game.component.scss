@@ -110,3 +110,13 @@ app-player, app-player-mobile{
     }
 }
 
+.preloadImage{
+    opacity: 0;
+    height: 0;
+    z-index: -9999999999;
+    width: 0;
+    padding: 0;
+    position: absolute;
+    margin: 0;
+}
+
