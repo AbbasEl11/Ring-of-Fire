@@ -4,6 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { EditPlayerComponent } from '../edit-player/edit-player.component';
 
 @Component({
   selector: 'app-dialog-add-player',
@@ -16,7 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class DialogAddPlayerComponent {
   name: string = '';
   
-  constructor(private dialog: MatDialogRef<DialogAddPlayerComponent> ) { }
+  constructor(private dialog: MatDialogRef<EditPlayerComponent> ) { }
 
   ngOnInit(): void {
   }

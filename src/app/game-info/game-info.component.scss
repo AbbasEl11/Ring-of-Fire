@@ -1,0 +1,14 @@
+mat-card{
+    @media (max-width: 720px) {
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+.mat-mdc-card-title,
+.mat-mdc-card-subtitle {
+    display: block;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+}

@@ -1,0 +1,20 @@
+
+.edit-Playerimages{
+    display: flex;
+    flex-direction: row;
+
+    >.profile-picture{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+    margin: 10px;
+    align-self: center;
+
+    &:hover{
+        transform: scale(1.15);
+    }
+}
+}
+

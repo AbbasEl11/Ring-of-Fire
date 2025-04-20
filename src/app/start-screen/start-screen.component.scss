@@ -6,8 +6,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
-    >img{  
-        height: 90vh;  
+    @media (max-width: 960px) {
+        overflow: hidden;
+    }
+
+    >.start-img{  
+        height: 90vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+            @media (max-width: 960px) {
+                height: 70vh;
+                }
+                @media (max-width: 700px) {
+                    height: 50vh;
+                }
+                    @media (max-width: 500px) {
+                        height: 40vh;
+                     }
+    }
+    >.start-label{
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 500px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        z-index: 2;
+    
+             &:hover {
+                 transform: scale(1.1) translateX(-45%);
+             }
+                  @media (max-width: 960px) {
+                      width: 350px;
+                  }
+                      @media (max-width: 700px) {
+                            width: 250px;
+                            top: 60%;
+                            left: 50%;
+                      }
+                        @media (max-width: 500px) {
+                            width: 250px;
+                            top: 58%;
+                            left: 50%;
+                        }
     }
 }

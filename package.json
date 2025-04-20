@@ -25,7 +25,6 @@
     "@angular/router": "^17.3.12",
     "@angular/ssr": "^17.0.3",
     "express": "^4.18.2",
-    "firebase": "^11.6.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
